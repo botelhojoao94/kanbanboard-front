@@ -20,7 +20,7 @@ function Board() {
     }
 
     useEffect(() => {
-        axios.get('https://kanbanboard-back.herokuapp.com/data/items')
+        axios.get('https://kanbanboard-back.vercel.app/data/items')
             .then((response) => {
                 setItems(response.data.dados);
             })
@@ -30,7 +30,7 @@ function Board() {
     }, [items]);
 
     useEffect(() => {
-        axios.get('https://kanbanboard-back.herokuapp.com/data/lists')
+        axios.get('https://kanbanboard-back.vercel.app/data/lists')
             .then((response) => {
                 setLists(response.data.dados);
             })

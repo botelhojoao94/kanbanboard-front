@@ -12,7 +12,7 @@ import DeleteListModal from './DeleteListModal'
 function List(props) {
 
     const handleCreateItem = (e) => {
-        axios.post('https://kanbanboard-back.herokuapp.com/data/item', {
+        axios.post('https://kanbanboard-back.vercel.app/data/item', {
             title: "Title",
             description: "Description",
             list_id: e.target.getAttribute("list-id"),
@@ -27,7 +27,7 @@ function List(props) {
     }
 
     const handleEditListTitle = (e) => {
-        axios.put('https://kanbanboard-back.herokuapp.com/data/list', {
+        axios.put('https://kanbanboard-back.vercel.app/data/list', {
             id: e.name,
             title: e.value,
         })

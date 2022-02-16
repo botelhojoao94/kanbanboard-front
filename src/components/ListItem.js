@@ -14,7 +14,7 @@ function ListItem(props) {
     const colors = ['#FF7160', '#FFB31D', '#FFEE21', '#26F954', '#25AAFF', '#EBECF0']
 
     const handleEditItemTitle = (e) => {
-        axios.put('https://kanbanboard-back.herokuapp.com/data/item', {
+        axios.put('https://kanbanboard-back.vercel.app/data/item', {
             id: e.name,
             title: e.value,
         })
@@ -27,7 +27,7 @@ function ListItem(props) {
     }
 
     const handleEditItemDescription = (e) => {
-        axios.put('https://kanbanboard-back.herokuapp.com/data/item', {
+        axios.put('https://kanbanboard-back.vercel.app/data/item', {
             id: e.name,
             description: e.value,
         })
@@ -40,7 +40,7 @@ function ListItem(props) {
     }
 
     const handleEditColor = (e, id) => {
-        axios.put('https://kanbanboard-back.herokuapp.com/data/item', {
+        axios.put('https://kanbanboard-back.vercel.app/data/item', {
             id: id,
             color: e.hex,
         })
@@ -53,7 +53,7 @@ function ListItem(props) {
     }
 
     const handleEditItemList = (e) => {
-        axios.put('https://kanbanboard-back.herokuapp.com/data/item', {
+        axios.put('https://kanbanboard-back.vercel.app/data/item', {
             id: parseInt(e.target.getAttribute('item_id')),
             list_id: parseInt(e.target.getAttribute('list_id'))
         })

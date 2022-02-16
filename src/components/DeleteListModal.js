@@ -9,9 +9,9 @@ function DeleteListModal(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const handleDelete = (e) => {
-        axios.delete(`https://kanbanboard-back.herokuapp.com/data/item/fromlist/${e.target.getAttribute('list_id')}`)
+        axios.delete(`https://kanbanboard-back.vercel.app/data/item/fromlist/${e.target.getAttribute('list_id')}`)
             .then((response) => {
-                axios.delete(`https://kanbanboard-back.herokuapp.com/data/list/${e.target.getAttribute('list_id')}`)
+                axios.delete(`https://kanbanboard-back.vercel.app/data/list/${e.target.getAttribute('list_id')}`)
                     .then((response) => {
                         props.notify()
                     })

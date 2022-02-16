@@ -10,7 +10,7 @@ function DeleteItemModal(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const handleDelete = (e) => {
-        axios.delete(`https://kanbanboard-back.herokuapp.com/data/item/${e.target.getAttribute('item_id')}}`)
+        axios.delete(`https://kanbanboard-back.vercel.app/data/item/${e.target.getAttribute('item_id')}}`)
             .then((response) => {
                 props.notify()
             })

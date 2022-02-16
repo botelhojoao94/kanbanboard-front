@@ -6,7 +6,7 @@ import logo from '../assets/images/logo.png'
 function PageTop(props) {
 
     const handleCreateList = () => {
-        axios.post('https://kanbanboard-back.herokuapp.com/data/list', {
+        axios.post('https://kanbanboard-back.vercel.app/data/list', {
             title: "Title",
         })
             .then((response) => {

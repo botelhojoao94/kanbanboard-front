@@ -78,13 +78,6 @@ function ListItem(props) {
                                 <FontAwesomeIcon icon={faEllipsisH} />
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
-                                <Dropdown.Item>
-                                    Move up
-                                </Dropdown.Item>
-                                <Dropdown.Item>
-                                    Move down
-                                </Dropdown.Item>
-                                <Dropdown.Divider />
                                 <Dropdown.Header>Move to list</Dropdown.Header>
                                 {props.lists.map((list, key) => {
                                     if (list.id != props.item.list_id)
